@@ -4,9 +4,10 @@ import cssimg from "../assets/css.png";
 import jsimg from "../assets/javascript.png";
 import reactimg from "../assets/react.png";
 import tailwindimg from "../assets/tailwind.png";
-import nextimg from "../assets/nextjs.png";
-import graphqlimg from "../assets/graphql.png";
+import javaimg from "../assets/java.png";
 import githubimg from "../assets/github.png";
+import springbootimg from "../assets/springboot.png";
+import mysqlimg from "../assets/mysql.png";
 
 const Experience = () => {
   const techs = [
@@ -42,27 +43,34 @@ const Experience = () => {
     },
     {
       id: 6,
-      src: nextimg,
-      title: "Next JS",
-      style: "shadow-white",
+      src: javaimg,
+      title: "Java",
+      style: "shadow-sky-300",
     },
     {
       id: 7,
-      src: graphqlimg,
-      title: "GraphQL",
-      style: "shadow-pink-400",
+      src: springbootimg,
+      title: "Spring boot",
+      style: "shadow-green-400",
     },
     {
       id: 8,
+      src: mysqlimg,
+      title: "MYSQL",
+      style: "shadow-blue-300",
+    },
+    {
+      id: 9,
       src: githubimg,
       title: "GitHub",
       style: "shadow-gray-400",
     },
+    
   ];
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-fit pt-20"
+      className="h-fit min-h-screen bg-gradient-to-b from-gray-800 to-black w-full pt-20"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white ">
         <div>
