@@ -8,6 +8,7 @@ import javaimg from "../assets/java.png";
 import githubimg from "../assets/github.png";
 import springbootimg from "../assets/springboot.png";
 import mysqlimg from "../assets/mysql.png";
+import reduxImg from "../assets/redux.png";
 
 const Experience = () => {
   const techs = [
@@ -55,12 +56,18 @@ const Experience = () => {
     },
     {
       id: 8,
+      src: reduxImg,
+      title: "Redux",
+      style: "shadow-purple-400",
+    },
+    {
+      id: 9,
       src: mysqlimg,
       title: "MYSQL",
       style: "shadow-blue-300",
     },
     {
-      id: 9,
+      id: 10,
       src: githubimg,
       title: "GitHub",
       style: "shadow-gray-400",

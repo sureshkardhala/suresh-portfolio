@@ -10,7 +10,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 
 
-const DM = ({ about,style, name, others}) => {
+const Project = ({ about,style, name, others, images}) => {
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -38,6 +38,12 @@ const DM = ({ about,style, name, others}) => {
         </div>
         <div className='text-center mt-10'>
             <p>{name}</p>
+        </div>
+        <div className='flex justify-center mt-10'>
+        <div className='grid grid-cols-3 gap-2 w-96'>
+               {images.map(({id, image}) => ( <img key={id} src={image} alt='' className='w-60 h-20 border-gray-700 rounded-lg border-[1px] shadow-md' />))}
+        </div>
+      
         </div>
        {!others && <div className='h-fit mt-1 md:mt-10 p-4 md:px-10'>
             <div className='text-3xl p-2 '>
@@ -101,4 +107,4 @@ const DM = ({ about,style, name, others}) => {
   </div>
   )
 }
-export default DM
+export default Project;

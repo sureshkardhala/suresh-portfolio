@@ -8,11 +8,11 @@ import usertoggleImg  from "../assets/usertoggle.png";
 import nodeapiImg from "../assets/nodeapi.png";
 import  autosaveImg from "../assets/autosave.png";
 import otherImg from "../assets/other.png";
-import DM from './Project';
+import Project from './Project';
 import PopMsg from './PopMsg';
 import egovImg from "../assets/egovernment.png";
 import tjvImg from "../assets/tjv.png";
-import countertoolkit from "../assets/conutertoolkit.png"
+import countertoolkit from "../assets/conutertoolkit.png";
 
 
 
@@ -40,7 +40,9 @@ const Portfolio = () => {
         {id:11, data: "Using Hooks concepts for better statemanagement & developing business logics in service layer."}
       ],
       containerStyle : " h-fit ",
-      others:false
+      others:false,
+      images:[],
+
 
     },
     {
@@ -67,9 +69,8 @@ const Portfolio = () => {
         {id:14, data:"ReactHookForms, useRef, useState, useEffect hooks are used"}
       ],
       containerStyle : " h-fit ",
-      others:false
-
-
+      others:false,
+      images:[],
     },
     {
       id: 3,
@@ -88,7 +89,8 @@ const Portfolio = () => {
         {id:7, data:"Deployed in netlify"}
       ],
       containerStyle : " min-h-screen ",
-      others:false
+      others:false,
+      images:[],
 
 
     },
@@ -111,7 +113,9 @@ const Portfolio = () => {
         {id:10, data:"If two api call data having same count number it will take latest one . send it back and retry the otherone"}
       ],
       containerStyle : " min-h-screen ",
-      others:false
+      others:false,
+      images:[],
+
 
 
     },
@@ -133,7 +137,9 @@ const Portfolio = () => {
         {id:10, data:"Java used to check basic admin or student from rest api"}
       ],
       containerStyle : " min-h-screen ",
-      others:false
+      others:false,
+      images:[],
+
 
     },
     
@@ -158,7 +164,9 @@ const Portfolio = () => {
         {id:11, data:"useRef, useState, useEffect hooks are used"}
       ],
       containerStyle : " h-fit ",
-      others:false
+      others:false,
+      images:[],
+
 
 
     },
@@ -181,7 +189,9 @@ const Portfolio = () => {
         {id:9, data:"PHP used as backend & Mysql for a database"}
       ],
       containerStyle : " min-h-screen ",
-      others:false
+      others:false,
+      images:[],
+
 
     },
     {
@@ -203,7 +213,9 @@ const Portfolio = () => {
         {id:9, data:"have created api for upload an event, update and delete events"}
       ],
       containerStyle : " min-h-screen ",
-      others:false
+      others:false,
+      images:[],
+
     },
     {
       id: 9,
@@ -248,7 +260,9 @@ const Portfolio = () => {
         },
       ],
       containerStyle : " h-fit p-2 ",
-      others:true
+      others:true,
+      images:[],
+
     },
     
   ];
@@ -266,7 +280,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:px-12 px-0">
-          {portfolios.map(({ id, image , name, style, personalProject, github,  about, containerStyle, others}) => (
+          {portfolios.map(({ id, image , name, style, personalProject, github,  about, containerStyle, others, images}) => (
             <div key={id} className={"w-full shadow-md shadow-gray-600 rounded-lg " + style}>
               <img
                 src={image}
@@ -278,7 +292,7 @@ const Portfolio = () => {
                   {name}
                 </div>
                  <div className="w-full flex flex-row justify-between space-x-16 ">
-                  <DM about={about} style={containerStyle} name={name} others={others}/>
+                  <Project about={about} style={containerStyle} name={name} others={others} images={images}/>
                 {personalProject &&<a 
                 href={github}
                 target="_blank"
