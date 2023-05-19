@@ -1,6 +1,6 @@
 import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import profile from "../assets/profile-image.png";
+import profile from "../assets/profile-image.jpg";
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
       className="min-h-screen h-fit w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto  flex flex-col-reverse items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full mt-8 md:mt-32">
+        <div className="flex flex-col justify-center h-full mt-10 md:mt-32">
           <h2 className="text-4xl sm:text-7xl font-bold text-white">
             I'm Full Stack Developer
           </h2>
@@ -35,11 +35,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-10 md:mt-32">
+        <div className=" mt-10 md:mt-32">
         <img
             src={profile}
             alt="my profile"
-            className="rounded-2xl mx-auto w-[350px] h-88"
+            className="rounded-2xl mx-auto sm:w-96 w-[350px] h-88"
           />
         </div>
       </div>

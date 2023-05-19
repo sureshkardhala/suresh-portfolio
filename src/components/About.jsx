@@ -88,7 +88,7 @@ export default function About() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(5)} className="text-gray-400 font-light text-lg">
+        <AccordionHeader onClick={() => handleOpen(5)} className="text-gray-400 font-light text-lg text-start">
         Passion for Learning and Adaptability
         </AccordionHeader>
         <AccordionBody  className="text-gray-300">
