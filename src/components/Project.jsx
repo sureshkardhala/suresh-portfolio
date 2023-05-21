@@ -33,20 +33,20 @@ const Project = ({ about,style, name, others, images}) => {
     >
     <div className={'w-full bg-gradient-to-b from-black to-gray-800  text-white' + style}>
         <div className="bg-gradient-to-t from-gray-800 to-black h-16 p-4 px-10 md:px-20 flex justify-between">
-            <p className='text-3xl cursor-pointer font-signature'>Suresh</p>
+            <p className='text-3xl cursor-pointer font-signature'></p>
             <p className='text-2xl cursor-pointer' onClick={handleClose}><IoCloseSharp /></p>
         </div>
-        <div className='text-center mt-10'>
+        <div className='text-center mt-10 text-2xl'>
             <p>{name}</p>
         </div>
         <div className='flex justify-center mt-10'>
         <div className='grid grid-cols-3 gap-2 w-96'>
-               {images.map(({id, image}) => ( <img key={id} src={image} alt='' className='w-60 h-20 border-gray-700 rounded-lg border-[1px] shadow-md' />))}
+               {images?.map(({id, image}) => ( <img key={id} src={image} alt='' className='w-60 h-20 border-gray-700 rounded-lg border-[1px] shadow-md' />))}
         </div>
       
         </div>
        {!others && <div className='h-fit mt-1 md:mt-10 p-4 md:px-10'>
-            <div className='text-3xl p-2 '>
+            <div className='text-xl p-2 '>
                 <p >Description : </p>
             </div>
             <div className='flex flex-col md:mt-6 px-4'>

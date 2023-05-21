@@ -5,9 +5,18 @@ import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
 import Experience from './components/Experience'
 import Contact from "./components/Contact";
-
+import { useDispatch} from "react-redux";
+import { useEffect} from "react";
+import { fetchData } from "./store/portfolio-actions";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() =>{
+   
+    dispatch(fetchData());
+  }, [dispatch]);
+
   return (
    <>
    <NavBar />
@@ -20,5 +29,4 @@ function App() {
    </>
   );
 }
-
 export default App;
