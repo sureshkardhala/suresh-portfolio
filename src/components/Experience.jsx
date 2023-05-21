@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 const Experience = () => {
   const mySkills = useSelector((state) => state.portfolio.mySkills);
   console.log(mySkills);
+  const color = [" shadow-orange-500", " shadow-blue-400", " shadow-yellow-500", " shadow-sky-400",  " shadow-sky-800",  " shadow-orange-800",  " shadow-green-400",  " shadow-violet-400",  " shadow-sky-400", " shadow-gray-300",  " shadow-sky-400",]
 
   return (
     <div
@@ -22,9 +23,9 @@ const Experience = () => {
           {mySkills?.map(({ id, src, title, style }) => (
             <div
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={"shadow-md hover:scale-105 duration-500 py-2 rounded-lg shadow-gray-300 " +  color[id-1]}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
+              <img src={src} alt="" className="w-20 mx-auto"/>
               <p className="mt-4">{title}</p>
             </div>
           ))}
