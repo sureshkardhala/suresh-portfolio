@@ -55,7 +55,7 @@ export default function About() {
             >
               <AccordionHeader
                 onClick={() => handleOpen(id)}
-                className="text-gray-400 font-light text-lg"
+                className="text-gray-400 font-light text-lg text-left"
               >
                 {name}
               </AccordionHeader>
